@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <script src="Security.js"></script>
+        <script src="AuthInterface.js"></script>
+        <title>RSA&nbsp;encrypt&nbsp;test</title>
+    </head>
+    <body>
+        <form action="javascript:submit()">
+            <input type="text" name="passwd" id="passwd">
+            <input type="submit" value="encrypt">
+        </form>
+        <p id="result"></p>
+        <script lang="javascript">
+            function submit() {
+                var passwd = document.getElementById("passwd").value
+                document.getElementById("result").innerHTML = encryptedPassword(passwd)
+            }
+        </script>
+    </body>
+</html>
