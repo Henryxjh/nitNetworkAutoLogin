@@ -24,7 +24,7 @@ public class RSAEncrypt {
             String AuthScript = new String(iStreamAuth.readAllBytes());
             context.eval("js", SecScript);
             context.eval("js", String.format(AuthScript, pubKeyExponent, pubKeyModulus));
-            result = context.eval("js", String.format("encryptedPassword(%s)", passwordWithSalt)).asString();
+            result = context.eval("js", String.format("encryptedPassword(\"%s\")", passwordWithSalt)).asString();
         } catch (IOException e) {
             e.printStackTrace();
         }
