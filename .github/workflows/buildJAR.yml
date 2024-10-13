@@ -15,7 +15,7 @@ jobs:
               uses: actions/setup-java@v4
               with:
                 distribution: "graalvm"
-                java-version: "17"
+                java-version: "21"
                 cache: maven
             - name: build and package
               run: chmod +x package.sh;./package.sh
